@@ -51,7 +51,6 @@ npm run start-compress ## with closure compiler
   - Evrything is typed (even the configs!)
   - Faster TS compilation times
   - Free from ts-loader bugs
-  - No need for pure js files
   - Global import aliases in `tsconfig.json` (automatically parsed by webpack)
 ### Optional Google Closure Compiler
   - `npm run compress` and `npm run server-compress`
