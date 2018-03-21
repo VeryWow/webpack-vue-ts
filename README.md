@@ -64,3 +64,4 @@ npm run start-compress ## with closure compiler
   - Scss & Pug out of the box
   - A more flexible scheme than Nuxt.js
   - A prepared folder for hand-written plugins
+  - Vue shorthands for `process.env.NODE_ENV` - `$isDevelopment` and `$environment`
