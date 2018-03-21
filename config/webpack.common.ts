@@ -3,6 +3,16 @@ import { Configuration } from 'webpack';
 import path = require('path');
 import HtmlWebPackPlugin = require('html-webpack-plugin');
 
+/*// Importing aliases from tsconfig... */ {
+  const tsconfig = require('../tsconfig.json');
+  const paths: { [key: string]: string[] } = tsconfig.compilerOptions.paths;
+  var aliases: { [key: string]: string } = {};
+
+  for (let path in paths) {
+    aliases[path] = paths[path][0];
+  }
+} //
+
 const config: Configuration = {
   entry: path.resolve(__dirname, '../src/index.ts'),
   module: {
@@ -46,7 +56,11 @@ const config: Configuration = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.vue', '.json'],
     alias: {
+      // No need for hmtl-transpiler since everything is parsed into functional components via vue-loader
       'vue$': 'vue/dist/vue.runtime.esm.js',
+
+      // Other aliases go there
+      ...aliases
     }
   },
   cache: true,
