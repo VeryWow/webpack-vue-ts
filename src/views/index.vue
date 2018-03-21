@@ -30,10 +30,10 @@
 
 <style lang="scss">
   h1 {
-    color: rgb(68, 68, 68);
+    color: #35495e;
 
     hr {
-      border-color: #12cf70;
+      border-color: #41b883;
     }
   }
 </style>
