@@ -1,0 +1,62 @@
+{
+  "name": "webpack-vue-ts",
+  "version": "0.0.0",
+  "description": "Simple and complete WebPack 4 boilerplate for Vue.js and TypeScript",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --config config/webpack.dev.ts --open --hot",
+    "build": "webpack --mode production --config config/webpack.prod.ts",
+    "compress": "webpack --mode production --config config/webpack.compress.ts",
+    "server": "http-server-spa dist index.html 5000",
+    "start": "npm run build && npm run server",
+    "start-compressed": "npm run compress && npm run server",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.7",
+    "@types/webpack": "^4.1.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "element-ui": "^2.2.2",
+    "google-closure-compiler": "^20180204.0.0",
+    "html-webpack-plugin": "^3.0.7",
+    "http-server-spa": "^1.2.0",
+    "jest": "^22.4.2",
+    "node-sass": "^4.7.2",
+    "pug": "^2.0.2",
+    "sass-loader": "^6.0.7",
+    "scss-loader": "0.0.1",
+    "ts-loader": "^4.1.0",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2",
+    "vue-loader": "^14.2.1",
+    "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-closure-compiler": "^2.1.6",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1"
+  },
+  "keywords": [
+    "boilerplate",
+    "template",
+    "modern",
+    "simple",
+    "Vue",
+    "Vue.js",
+    "WebPack",
+    "webpack@4",
+    "webpack-4",
+    "typescript",
+    "google-closure-compiler",
+    "ts-node",
+    "tests"
+  ]
+}
