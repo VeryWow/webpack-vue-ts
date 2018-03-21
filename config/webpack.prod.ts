@@ -1,8 +1,7 @@
 import { Configuration } from 'webpack';
 
 import merge = require('webpack-merge');
-import common = require('./webpack.config');
-import ClosureCompiler = require('webpack-closure-compiler');
+import common = require('./webpack.common');
 
 const prod: Configuration = {
 }
