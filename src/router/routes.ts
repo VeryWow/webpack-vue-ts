@@ -1,9 +1,13 @@
-import { RouteConfig } from 'vue-router';
+import { RouteConfig } from 'vue-router'
+import { Component } from 'vue-router/types/router'
 
-const page = (name: string) => ({
+export const page = (name: string): Component => ({
   render: h => h(require('../views/pages/' + name).default)
-})
-// const component = (name: string) => require('components/' + name);;
+});
+
+export const component = (name: string): Component => ({
+  render: h => h(require('../views/components/' + name).default)
+});
 
 export const routes: RouteConfig[] = [
   {
@@ -11,4 +15,4 @@ export const routes: RouteConfig[] = [
     name: 'welcome',
     component: page('welcome.vue')
   }
-]
+];
