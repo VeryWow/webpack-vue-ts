@@ -26,9 +26,6 @@ npm run dev
 ## Launch production build
 npm run build
 
-## Get smaller builds with the Google Closure Compiler
-npm run compress
-
 ## Run tests
 npm test
 
@@ -37,7 +34,6 @@ npm run server
 
 ## Build & Launch a server
 npm run start
-npm run start-compress ## with closure compiler
 ```
 
 ## Features
@@ -52,10 +48,6 @@ npm run start-compress ## with closure compiler
   - Faster TS compilation times
   - Free from ts-loader bugs
   - Global import aliases in `tsconfig.json` (automatically parsed by webpack)
-### Optional Google Closure Compiler
-  - `npm run compress` and `npm run server-compress`
-  - Reduced build size
-  - Additional static code analysis
 ### Vue.js with all the nessecities
   - Vue 2.5+
   - Vue-Router

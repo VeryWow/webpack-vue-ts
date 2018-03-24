@@ -26,6 +26,9 @@
       "router": ["./router"],
       "store": ["./store"],
       "plugins": ["./plugins"]
-    }
+    },
+    "types": [
+      "vue-typescript-import-dts"
+    ]
   }
 }
