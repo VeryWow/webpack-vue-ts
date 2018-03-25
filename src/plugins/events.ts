@@ -46,7 +46,6 @@ class EventManagment {
   emit(eventName: string, ...args): void {
     let handlersToDelete: Function[] = [];
     if (this.eventHandlersMap[eventName]) {
-      console.log(123)
       this.eventHandlersMap[eventName].forEach((options: eventHandlerOptions, handler: Function) => {
         handler(...args);
         if (options.once) {
