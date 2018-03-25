@@ -8,13 +8,12 @@ class EventManagment {
   private eventHandlersMap: { [key: string]: Map<Function, eventHandlerOptions> } = {}
 
   private addEventHandler(eventName: string, callback: Function, options: eventHandlerOptions) {
-    let evnt = this.eventHandlersMap[eventName];
-    if (!evnt) {
-      evnt = new Map();
+    if (!this.eventHandlersMap[eventName]) {
+      this.eventHandlersMap[eventName] = new Map();
     }
 
-    if (!evnt.has(callback)) {
-      evnt.set(callback, options);
+    if (!this.eventHandlersMap[eventName].has(callback)) {
+      this.eventHandlersMap[eventName].set(callback, options);
     }
   }
 
@@ -33,13 +32,12 @@ class EventManagment {
   }
 
   off(eventName: string, callback: Function): boolean {
-    let evnt = this.eventHandlersMap[eventName]
-    if (!evnt) {
+    if (!this.eventHandlersMap[eventName]) {
       return true;
     }
 
-    if (evnt.has(callback)) {
-      return evnt.delete(callback);
+    if (this.eventHandlersMap[eventName].has(callback)) {
+      return this.eventHandlersMap[eventName].delete(callback);
     }
 
     return true;
@@ -47,16 +45,16 @@ class EventManagment {
 
   emit(eventName: string, ...args): void {
     let handlersToDelete: Function[] = [];
-    let evnt = this.eventHandlersMap[eventName];
-    if (evnt) {
-      evnt.forEach((options: eventHandlerOptions, handler: Function) => {
+    if (this.eventHandlersMap[eventName]) {
+      console.log(123)
+      this.eventHandlersMap[eventName].forEach((options: eventHandlerOptions, handler: Function) => {
         handler(...args);
         if (options.once) {
           handlersToDelete.push(handler);
         }
       });
       handlersToDelete.forEach(el => {
-        evnt.delete(el);
+        this.eventHandlersMap[eventName].delete(el);
       })
     }
   }
