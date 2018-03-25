@@ -9,7 +9,7 @@
 **Basic setup**
 ```bash
 ## Clone the repo
-git clone https://github.com/Raiondesu/webpack-vue-ts.git
+git clone https://github.com/VeryWow/webpack-vue-ts.git
 cd webpack-vue-ts
 
 ## Rename the folder
