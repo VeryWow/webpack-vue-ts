@@ -11,3 +11,5 @@ const plugins: PluginObject<any> = {
 }
 
 export default plugins;
+
+export { environment, isDevelopment } from './common'
