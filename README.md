@@ -26,9 +26,6 @@ npm run dev
 ## Launch production build
 npm run build
 
-## Get smaller builds with the Google Closure Compiler
-npm run compress
-
 ## Run tests
 npm test
 
@@ -37,7 +34,6 @@ npm run server
 
 ## Build & Launch a server
 npm run start
-npm run start-compress ## with closure compiler
 ```
 
 ## Features
@@ -51,12 +47,7 @@ npm run start-compress ## with closure compiler
   - Evrything is typed (even the configs!)
   - Faster TS compilation times
   - Free from ts-loader bugs
-  - No need for pure js files
   - Global import aliases in `tsconfig.json` (automatically parsed by webpack)
-### Optional Google Closure Compiler
-  - `npm run compress` and `npm run server-compress`
-  - Reduced build size
-  - Additional static code analysis
 ### Vue.js with all the nessecities
   - Vue 2.5+
   - Vue-Router
@@ -64,3 +55,4 @@ npm run start-compress ## with closure compiler
   - Scss & Pug out of the box
   - A more flexible scheme than Nuxt.js
   - A prepared folder for hand-written plugins
+  - Vue shorthands for `process.env.NODE_ENV` - `$isDevelopment` and `$environment`
