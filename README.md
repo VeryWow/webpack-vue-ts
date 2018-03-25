@@ -26,6 +26,9 @@ npm run dev
 ## Launch production build
 npm run build
 
+## Launch a build for development testing server
+npm run build-dev
+
 ## Run tests
 npm test
 
@@ -34,6 +37,9 @@ npm run server
 
 ## Build & Launch a server
 npm run start
+
+## Build dev & Launch a server
+npm run start-dev
 ```
 
 ## Features
