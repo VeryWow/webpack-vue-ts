@@ -8,8 +8,9 @@ import HtmlWebPackPlugin = require('html-webpack-plugin');
   const paths: { [key: string]: string[] } = tsconfig.compilerOptions.paths;
   var aliases: { [key: string]: string } = {};
 
-  for (let path in paths) {
-    aliases[path] = paths[path][0];
+  for (let _path in paths) {
+    aliases[_path] = path.resolve(__dirname, '../src', paths[_path][0]);
+    console.log(path.resolve(__dirname, '../src', paths[_path][0]))
   }
 } //
 
