@@ -18,13 +18,17 @@
     "diagnostics": true,
     "baseUrl": "./src",
     "paths": {
-      "@": ["./"],
-      "~": ["./assets"],
+      "@/": ["./*"],
+      "~/": ["./assets/*"],
+      "views/": ["./views/*"],
       "views": ["./views"],
+      "components/": ["./views/components/*"],
       "components": ["./views/components"],
+      "pages/": ["./views/pages/*"],
       "pages": ["./views/pages"],
+      "router/": ["./router/*"],
       "router": ["./router"],
-      "store": ["./store"],
+      "plugins/": ["./plugins/*"],
       "plugins": ["./plugins"]
     },
     "types": [

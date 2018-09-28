@@ -9,8 +9,8 @@ import HtmlWebPackPlugin = require('html-webpack-plugin');
   var aliases: { [key: string]: string } = {};
 
   for (let _path in paths) {
-    aliases[_path] = path.resolve(__dirname, '../src', paths[_path][0]);
-    console.log(path.resolve(__dirname, '../src', paths[_path][0]))
+    aliases[_path] = path.resolve(__dirname, '../src', paths[_path][0].replace('/*', ''));
+    console.log(path.resolve(__dirname, '../src', paths[_path][0].replace('/*', '')))
   }
 } //
 
