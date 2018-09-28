@@ -1,4 +1,4 @@
-# webpack-vue-ts
+# webpack-vue-ts (DISCONTIUED, SEE [MANTHA](https://github.com/KazanExpress/mantha))
 > A simple and complete WebPack 4 boilerplate for Vue.js and TypeScript.
 
 - [Setup](#setup)
