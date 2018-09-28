@@ -9,6 +9,7 @@ export const routes: RouteConfig[] = [
   {
     path: '/',
     name: 'welcome',
-    component: page('welcome.vue')
+    component: page('welcome.vue'),
+    children: []
   }
 ];
